@@ -82,6 +82,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	background: #eee;
+	font-family: sans-serif;
 }
 
 .poster {
@@ -112,5 +113,10 @@ body {
 	background: white;
 	width: 50%;
 	height: 33.333%;
+	font-size: 2em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 /*# sourceMappingURL=main.css.map */
