@@ -3,7 +3,7 @@
 console.log('Hello World from main.js!');
 gsap.to('.square', {
   duration: 2,
-  delay: 10,
+  delay: 5,
   color: 'white'
 });
 var tl = gsap.timeline({

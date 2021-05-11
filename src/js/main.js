@@ -1,6 +1,6 @@
 console.log('Hello World from main.js!');
 
-gsap.to('.square', { duration: 2, delay: 10, color: 'white' });
+gsap.to('.square', { duration: 2, delay: 5, color: 'white' });
 
 let tl = gsap.timeline({
 	repeat: -1,
