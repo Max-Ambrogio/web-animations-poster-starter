@@ -14,45 +14,55 @@ TABLE OF CONTENTS:
 
 @import 'reset';
 
-
 /* 1. Main Layout ================================= */
 
 * {
 	box-sizing: border-box;
 }
 
+/*
+*
+* MEASURE YOUR POSTER and change these two variables !
+* 
+*/
+$poster-width: 24;
+$poster-height: 36;
+
 body {
+	min-height: 100vh;
+	padding: 5vh 5vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background: #eee;
 }
-
-// calculate the ratio of your poster and put it here
-$ratio: 11/17;
-
 .poster {
-	position: absolute;
-	height: 90vh;
-	width: 90vh * $ratio;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	position: relative;
 
 	overflow: hidden;
 
 	background-color: #454454;
-	box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
 
-	// temporary background image just for help positioning during development
-	background-image: url("../img/guide-layer.png");
-	background-size: contain;
-
-	// put all elements in the poster, like this, with % for sizing and positioning.
-	.white-star-top-left-corner {
-		width: 8%;
-		position: absolute;
-		top: 4%;
-		left: 15%;
+	@media (min-aspect-ratio: #{$poster-width}/#{$poster-height}) {
+		width: 90vh * ($poster-width/$poster-height);
+		height: 90vh;
 	}
 
+	@media (max-aspect-ratio: #{$poster-width}/#{$poster-height}) {
+		width: 90vw;
+		height: 90vw * ($poster-height/$poster-width);
+	}
+
+	/*
+		Everything in % so it's fully responsive!!!!!
+	*/
+	.square {
+		position: absolute;
+		top: 10%;
+		left: 10%;
+		background: white;
+		width: 50%; // of the poster width
+		height: 33.333%; // of the poster height
+	}
 }
-
-

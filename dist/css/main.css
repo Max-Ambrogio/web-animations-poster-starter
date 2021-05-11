@@ -56,7 +56,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
+	content: "";
 	content: none;
 }
 
@@ -70,30 +70,47 @@ table {
 	box-sizing: border-box;
 }
 
+/*
+*
+* MEASURE YOUR POSTER and change these two variables !
+* 
+*/
 body {
+	min-height: 100vh;
+	padding: 5vh 5vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background: #eee;
 }
 
 .poster {
-	position: absolute;
-	height: 90vh;
-	width: 58.23529vh;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	        transform: translate(-50%, -50%);
+	position: relative;
 	overflow: hidden;
 	background-color: #454454;
 	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
-	background-image: url("../img/guide-layer.png");
-	background-size: contain;
+	/*
+		Everything in % so it's fully responsive!!!!!
+	*/
 }
-
-.poster .white-star-top-left-corner {
-	width: 8%;
+@media (min-aspect-ratio: 24/36) {
+	.poster {
+		width: 60vh;
+		height: 90vh;
+	}
+}
+@media (max-aspect-ratio: 24/36) {
+	.poster {
+		width: 90vw;
+		height: 135vw;
+	}
+}
+.poster .square {
 	position: absolute;
-	top: 4%;
-	left: 15%;
+	top: 10%;
+	left: 10%;
+	background: white;
+	width: 50%;
+	height: 33.333%;
 }
-
 /*# sourceMappingURL=main.css.map */
