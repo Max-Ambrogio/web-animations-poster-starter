@@ -94,29 +94,26 @@ body {
 		Everything in % so it's fully responsive!!!!!
 	*/
 }
-@media (min-aspect-ratio: 24/36) {
+@media (min-aspect-ratio: 751/1063) {
 	.poster {
-		width: 60vh;
+		width: 63.5841956726vh;
 		height: 90vh;
 	}
 }
-@media (max-aspect-ratio: 24/36) {
+@media (max-aspect-ratio: 751/1063) {
 	.poster {
 		width: 90vw;
-		height: 135vw;
+		height: 127.3901464714vw;
 	}
 }
-.poster .square {
+.poster .full-size {
 	position: absolute;
-	top: 10%;
-	left: 10%;
-	background: white;
-	width: 50%;
-	height: 33.333%;
-	font-size: 2em;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+}
+.poster .character {
+	-ms-transform: translateY(15%);
+	    transform: translateY(15%);
 }
 /*# sourceMappingURL=main.css.map */

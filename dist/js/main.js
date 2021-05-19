@@ -1,43 +1,26 @@
 "use strict";
 
 console.log('Hello World from main.js!');
-gsap.to('.square', {
+gsap.from('.background', {
   duration: 2,
-  delay: 5,
-  color: 'white'
+  y: '-=5%'
 });
-var tl = gsap.timeline({
-  repeat: -1,
-  onRepeat: function onRepeat() {
-    if (tl.timeScale() < 30) tl.timeScale(tl.timeScale() * 1.2);
-  }
+gsap.from('.sand-back', {
+  duration: 3,
+  y: '+=2%'
 });
-tl.to('.square', {
-  duration: 1.5,
-  ease: 'power1.inOut',
-  left: '40%',
-  top: '58%',
-  rotation: '+=90'
+gsap.from('.sand-front', {
+  duration: 3,
+  y: '+=5%'
 });
-tl.to('.square', {
-  duration: 1.5,
-  ease: 'power1.inOut',
-  left: '40%',
-  top: '10%',
-  rotation: '+=90'
+gsap.from('.character', {
+  duration: 3,
+  y: '+=8%'
 });
-tl.to('.square', {
-  duration: 1.5,
-  ease: 'power1.inOut',
-  left: '10%',
-  top: '58%',
-  rotation: '+=90'
-});
-tl.to('.square', {
-  duration: 1.5,
-  ease: 'power1.inOut',
-  left: '10%',
-  top: '10%',
-  rotation: '-=90'
+gsap.from('.text', {
+  delay: 1,
+  duration: 2,
+  opacity: 0,
+  y: '-=5%'
 });
 //# sourceMappingURL=main.js.map
