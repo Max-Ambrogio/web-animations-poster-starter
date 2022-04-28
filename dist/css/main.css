@@ -28,46 +28,46 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
 
 body {
-	line-height: 1;
+  line-height: 1;
 }
 
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: "";
-	content: none;
+  content: "";
+  content: none;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* 1. Main Layout ================================= */
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*
@@ -76,44 +76,83 @@ table {
 * 
 */
 body {
-	min-height: 100vh;
-	padding: 5vh 5vw;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: #eee;
-	font-family: sans-serif;
+  min-height: 100vh;
+  padding: 5vh 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eee;
+  font-family: sans-serif;
 }
 
 .poster {
-	position: relative;
-	overflow: hidden;
-	background-color: #454454;
-	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
-	/*
-		Everything in % so it's fully responsive!!!!!
-	*/
+  position: relative;
+  overflow: hidden;
+  background-color: #454454;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+  /*
+  	Everything in % so it's fully responsive!!!!!
+  */
 }
-@media (min-aspect-ratio: 751/1063) {
-	.poster {
-		width: 63.5841956726vh;
-		height: 90vh;
-	}
+@media (min-aspect-ratio: 1000/1000) {
+  .poster {
+    width: 90vh;
+    height: 90vh;
+  }
 }
-@media (max-aspect-ratio: 751/1063) {
-	.poster {
-		width: 90vw;
-		height: 127.3901464714vw;
-	}
+@media (max-aspect-ratio: 1000/1000) {
+  .poster {
+    width: 90vw;
+    height: 90vw;
+  }
 }
 .poster .full-size {
-	position: absolute;
-	top: 0%;
-	left: 0%;
-	width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
 }
-.poster .character {
-	-ms-transform: translateY(15%);
-	    transform: translateY(15%);
+.poster .red-box {
+  top: 24%;
+  left: 10%;
+  width: 19%;
+}
+.poster .head {
+  top: 25%;
+  left: 46%;
+  width: 9%;
+  z-index: 1;
+}
+.poster .body {
+  top: 32%;
+  left: 42%;
+  width: 21%;
+}
+.poster .shoulder {
+  top: 35%;
+  left: 43%;
+  width: 5%;
+  z-index: 1;
+}
+.poster .forearm {
+  top: 44%;
+  left: 45%;
+  width: 13%;
+  z-index: 1;
+}
+.poster .logo {
+  top: 61%;
+  left: 13%;
+  width: 13%;
+}
+.poster .text-1 {
+  top: 43%;
+  left: 4%;
+  width: 32%;
+}
+.poster .text-2 {
+  top: 49%;
+  left: 8%;
+  width: 22%;
 }
 /*# sourceMappingURL=main.css.map */
