@@ -1,11 +1,25 @@
 console.log('Hello World from main.js!');
-
 gsap.from('.background', { duration: 2, y: '-=5%' });
 gsap.from('.character', { duration: 3, y: '+=8%' });
+gsap.from('.text-1', { delay: 5, duration: 2, opacity: 0, y: '-=5%' });
+gsap.from('.text-2', { delay: 6, duration: 2, opacity: 0, y: '-=5%' });
+gsap.from('.logo', { delay: 7, duration: 2, opacity: 0, y: '-=5%' });
 
-gsap.from('.text-1', { delay: 1, duration: 2, opacity: 0, y: '-=5%' });
-gsap.from('.text-2', { delay: 2, duration: 2, opacity: 0, y: '-=5%' });
-gsap.from('.logo', { delay: 3, duration: 2, opacity: 0, y: '-=5%' });
+(function(){
+	const bubble = document.querySelector(".bubble")
+    const person = document.querySelector(".character")
+	person.addEventListener("mouseover", function(){
+		bubble.classList.add('move')
+		console.log("hello")
+		person.classList.add('flick')
+
+		setTimeout(function(){
+			bubble.classList.remove('move')
+			person.classList.remove('flick')
+		}, 6000);
+	}, false);
+
+}());
 
 /*
 ideas for pushing it further
